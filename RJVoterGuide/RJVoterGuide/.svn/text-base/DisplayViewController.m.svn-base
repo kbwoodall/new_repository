@@ -1,0 +1,210 @@
+//
+//  DisplayViewController.m
+//  PhotoViewer
+//
+//  Created by Kerry Woodall on 4/19/12.
+//  Copyright (c) 2012 Las Vegas Review Journal. All rights reserved.
+//
+
+#import "DisplayViewController.h"
+#import "InfoViewController.h"
+
+@interface DisplayViewController ()
+
+@end
+
+@implementation DisplayViewController
+@synthesize currentImage;
+@synthesize currentText;
+@synthesize rjimage;
+@synthesize currentCandidate;
+
+NSMutableString *rString;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    NSString *val6 = @"in DisplayViewController";
+    NSLog(@"%@", val6);
+    NSLog(@"%@", currentCandidate.lastName);
+    
+    //NSLog(@"CANDIDATE: %@", currentCandidate.masterCandidateId );
+    NSString *cid = [currentCandidate masterCandidateId];
+    NSLog(@"%@", cid);
+    
+    //NSString *newMsg = [NSString stringWithFormat:@"%@ %@", @"Search results for", [currentMessage urlName]];
+    
+    //[messageOutlet setText:[currentMessage urlName]];
+    //[messageOutlet setText:newMsg];
+    
+    //NSString *urlnew = @"http://apps01.stephensmedia.com/CandidateGSON/GsonServlet?get=CANDIDATE&MASTERCANDIDATEID=1222&key=SFDOYYHOIHEDFHOPVNVNUPENURYORWEYOEVBYTWE";
+    
+    NSString *url1 = @"http://apps01.stephensmedia.com/CandidateGSON/GsonServlet?get=CANDIDATE&MASTERCANDIDATEID=";
+    
+    NSString *url2 = @"&key=SFDOYYHOIHEDFHOPVNVNUPENURYORWEYOEVBYTWE";
+    NSString *urlnew = [NSString stringWithFormat:@"%@%@%@",url1,cid,url2];
+    
+    NSLog(@"NEWURL: %@",urlnew);
+    //NSMutableString *str =[[NSMutableString alloc] initWithString:[currentMessage urlName]];
+    //NSString *str1 = @"http://projects.reviewjournal.com/index5.php?name=";
+    //NSString *result = [NSString stringWithFormat:@"%@ %@", str1, str];
+    //NSString *result = urlnew;
+    
+    NSURL *url = [NSURL URLWithString:[urlnew stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLResponse *resp = nil;
+    NSError *err = nil;
+    NSData *response = [NSURLConnection sendSynchronousRequest:
+                        request returningResponse: &resp error: &err];
+    
+    //picUrl ="http://media.lvrj.com/images/" + lastNameStr.toLowerCase() + "-election2012-" + inStr + ".png";
+    
+    //String var = "http://apps01.stephensmedia.com/CandidateGSON/GsonServlet?get=CANDIDATE&MASTERCANDIDATEID=" + inName + "&key=SFDOYYHOIHEDFHOPVNVNUPENURYORWEYOEVBYTWE";
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:response options:0 error:nil];
+    
+    //NSLog(@"%@",[dict allKeys]);
+    //NSLog(@"%@", dict.allValues);
+    
+    NSError *jsonError;
+    
+    if (!jsonError) {
+        rString = [NSMutableString new];
+        
+        NSString *firstName = [dict objectForKey:@"firstName"];
+        NSString *lastName = [dict objectForKey:@"lastName"];
+        NSString *fullName = [NSString stringWithFormat:@"%@ %@", firstName,lastName];
+        [rString appendString:fullName];
+        [rString appendString:@"\n\n"];
+        //[rString appendString:lastName];
+        //[rString appendString:@"\n\n"];
+        
+        NSDictionary *office = [dict objectForKey:@"office"];
+        NSString *officeStr = [office objectForKey:@"officeName"];
+        
+        if (office != nil) {
+            
+            //NSString *str=[[NSString alloc] initWithFormat:@"a%@", "Office: "];
+            //[UIFont boldSystemFontOfSize:12]; "Verdana"];
+            
+            [rString appendString:@"Office: "];
+            [rString appendString:officeStr];
+            [rString appendString:@"\n\n"];
+        }
+        NSDictionary *party = [dict objectForKey:@"party"];
+        NSString *partyStr = [party objectForKey:@"partyName"];
+        if (partyStr != nil) {
+            [rString appendString:@"Party: "];
+            [rString appendString:partyStr];
+            [rString appendString:@"\n\n"];
+        }
+        NSString *city = [dict objectForKey:@"city"];
+        if (city != nil) {
+            [rString appendString:@"City: "];
+            [rString appendString:city];
+            [rString appendString:@"\n\n"];
+        }
+        NSString *occupation = [dict objectForKey:@"occupation"];
+        if (occupation != nil) {
+            [rString appendString:@"Occupation: "];
+            [rString appendString:occupation];
+            [rString appendString:@"\n\n"];
+        }
+        NSString *education = [dict objectForKey:@"education"];
+        if (education != nil) {
+            [rString appendString:@"Education: "];
+            [rString appendString:education];
+            [rString appendString:@"\n\n"];
+        }
+        NSString *webSite = [dict objectForKey:@"webSite"];
+        if (webSite != nil) {
+            [rString appendString:@"WebSite: "];
+            [rString appendString:webSite];
+            [rString appendString:@"\n\n"];
+        }
+        
+        NSString *facebook = [dict objectForKey:@"facebook"];
+        if (facebook != nil) {
+            [rString appendString:@"Facebook: "];
+            [rString appendString:facebook];
+            [rString appendString:@"\n\n"];
+        }
+        NSObject *incumbent = [dict objectForKey:@"incumbent"];
+        if (incumbent != nil) {
+            [rString appendString:@"Incumbent: "];
+            if (incumbent == false)
+                [rString appendString:@"No"];
+            else
+                [rString appendString:@"Yes"];
+            [rString appendString:@"\n\n"];
+        }
+        NSString *qualifications = [dict objectForKey:@"qualificationsForOffice"];
+        if (qualifications != nil) {
+            [rString appendString:@"Qualifications: "];
+            [rString appendString:qualifications];
+            [rString appendString:@"\n\n"];
+        }
+        NSArray *aSet = [dict objectForKey:@"answerSet"];
+        //NSLog(@"%@", aSet);
+        
+        if (aSet != nil) {
+            
+            NSEnumerator *e = [aSet objectEnumerator];
+            id dict;
+            while (dict = [e nextObject]) {
+                if (dict != nil) {
+                    NSDictionary *q = [dict objectForKey:@"question"];
+                    NSString *question = [q objectForKey:@"question"];
+                    [rString appendString:@"Question: "];
+                    [rString appendString:question];
+                    [rString appendString:@"\n\n"];
+                    
+                    NSString *answer = [dict objectForKey:@"answer"];
+                    [rString appendString:@"Answer: "];
+                    [rString appendString:answer];
+                    [rString appendString:@"\n\n"];
+                }
+            }
+        }
+    }
+    else {
+        NSLog(@"There was a JSONSerialization Error: %@",jsonError);
+    }
+    //UIImage *image = [UIImage imageNamed: @"rj_masthead_lg.png"];
+    //[rjimage setImage: image];
+    
+    NSLog(@"%@", rString);
+    //currentText.text = rString;
+    [currentText setText:rString];
+}
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    InfoViewController *ivc = [segue destinationViewController];
+    //[ivc setCurrentPhoto:[self currentPhoto]];
+    [ivc setCurrentCandidate:[self currentCandidate]];
+    
+}
+
+- (void)viewDidUnload
+{
+    [self setCurrentImage:nil];
+    [self setRjimage:nil];
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+@end
