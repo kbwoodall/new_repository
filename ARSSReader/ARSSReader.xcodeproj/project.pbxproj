@@ -1,0 +1,372 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* ARSSReaderAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* ARSSReaderAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		28F335F11007B36200424DE2 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28F335F01007B36200424DE2 /* RootViewController.xib */; };
+		5D0169F21578FCAF00FF6339 /* logo-212x144.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0169F11578FCAF00FF6339 /* logo-212x144.png */; };
+		5D0169F5157903E800FF6339 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D0169F4157903E800FF6339 /* icon.png */; };
+		5D07C3F415C9A39500184A4D /* lv.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 5D07C3F315C9A39500184A4D /* lv.bmp */; };
+		5D27FC86159B82CA00E2085F /* UseScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27FC84159B82CA00E2085F /* UseScrollViewController.m */; };
+		5D27FC87159B82CA00E2085F /* UseScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D27FC85159B82CA00E2085F /* UseScrollViewController.xib */; };
+		5D2A6D48158F719200B3AEC2 /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A6D46158F719200B3AEC2 /* StoryViewController.m */; };
+		5D2A6D49158F719200B3AEC2 /* StoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D2A6D47158F719200B3AEC2 /* StoryViewController.xib */; };
+		5D87EAAF16A0A2CE005BA47F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D87EAAE16A0A2CE005BA47F /* Default-568h@2x.png */; };
+		5DB5E2D915A21925006E1BD3 /* RootViewController in Resources */ = {isa = PBXBuildFile; fileRef = 5DB5E2D815A21925006E1BD3 /* RootViewController */; };
+		5DBE132F158A8D900026DF0E /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBE132D158A8D8F0026DF0E /* CategoryViewController.m */; };
+		5DBE1330158A8D900026DF0E /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DBE132E158A8D8F0026DF0E /* CategoryViewController.xib */; };
+		5DDFB0D415C6FE5E001DC37C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDFB0D315C6FE5E001DC37C /* CoreData.framework */; };
+		9C90A74F11B6E929008060C8 /* arss_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A74E11B6E929008060C8 /* arss_back.png */; };
+		9C90A76511B6EDB4008060C8 /* arss_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C90A76411B6EDB4008060C8 /* arss_header.png */; };
+		9C90A76811B6EDEB008060C8 /* TableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C90A76711B6EDEB008060C8 /* TableHeaderView.m */; };
+		9CADD2E411AC49DA006DC23B /* RSSLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CADD2E311AC49DA006DC23B /* RSSLoader.m */; };
+		9CADD33C11AC4F39006DC23B /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CADD33B11AC4F39006DC23B /* GDataXMLNode.m */; };
+		9CADD34E11AC4FB3006DC23B /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CADD34D11AC4FB3006DC23B /* libxml2.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* ARSSReaderAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSSReaderAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* ARSSReaderAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSSReaderAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* ARSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28A0AAE50D9B0CCF005BE974 /* ARSSReader_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSSReader_Prefix.pch; sourceTree = "<group>"; };
+		28AD735F0D9D9599002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28C286DF0D94DF7D0034E888 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		28F335F01007B36200424DE2 /* RootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D0169F11578FCAF00FF6339 /* logo-212x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-212x144.png"; sourceTree = "<group>"; };
+		5D0169F4157903E800FF6339 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Classes/icon.png; sourceTree = "<group>"; };
+		5D07C3F315C9A39500184A4D /* lv.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = lv.bmp; path = ../../FromPC/temp/lv.bmp; sourceTree = "<group>"; };
+		5D27FC83159B82CA00E2085F /* UseScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseScrollViewController.h; sourceTree = "<group>"; };
+		5D27FC84159B82CA00E2085F /* UseScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseScrollViewController.m; sourceTree = "<group>"; };
+		5D27FC85159B82CA00E2085F /* UseScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UseScrollViewController.xib; sourceTree = "<group>"; };
+		5D2A6D45158F719200B3AEC2 /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewController.h; sourceTree = "<group>"; };
+		5D2A6D46158F719200B3AEC2 /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewController.m; sourceTree = "<group>"; };
+		5D2A6D47158F719200B3AEC2 /* StoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoryViewController.xib; sourceTree = "<group>"; };
+		5D87EAAE16A0A2CE005BA47F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5DB5E2D815A21925006E1BD3 /* RootViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RootViewController; sourceTree = "<group>"; };
+		5DBE132C158A8D8F0026DF0E /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		5DBE132D158A8D8F0026DF0E /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		5DBE132E158A8D8F0026DF0E /* CategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		5DDFB0D315C6FE5E001DC37C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8D1107310486CEB800E47090 /* ARSSReader-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ARSSReader-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		9C90A74E11B6E929008060C8 /* arss_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arss_back.png; sourceTree = "<group>"; };
+		9C90A76411B6EDB4008060C8 /* arss_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arss_header.png; sourceTree = "<group>"; };
+		9C90A76611B6EDEB008060C8 /* TableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableHeaderView.h; sourceTree = "<group>"; };
+		9C90A76711B6EDEB008060C8 /* TableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableHeaderView.m; sourceTree = "<group>"; };
+		9CADD2E211AC49DA006DC23B /* RSSLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSLoader.h; sourceTree = "<group>"; };
+		9CADD2E311AC49DA006DC23B /* RSSLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSLoader.m; sourceTree = "<group>"; };
+		9CADD33A11AC4F39006DC23B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		9CADD33B11AC4F39006DC23B /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		9CADD34D11AC4FB3006DC23B /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDFB0D415C6FE5E001DC37C /* CoreData.framework in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				9CADD34E11AC4FB3006DC23B /* libxml2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
+				28C286E00D94DF7D0034E888 /* RootViewController.m */,
+				5DB5E2D815A21925006E1BD3 /* RootViewController */,
+				1D3623240D0F684500981E51 /* ARSSReaderAppDelegate.h */,
+				1D3623250D0F684500981E51 /* ARSSReaderAppDelegate.m */,
+				9C90A76711B6EDEB008060C8 /* TableHeaderView.m */,
+				9CADD2E211AC49DA006DC23B /* RSSLoader.h */,
+				9CADD2E311AC49DA006DC23B /* RSSLoader.m */,
+				5DBE132D158A8D8F0026DF0E /* CategoryViewController.m */,
+				9C90A76611B6EDEB008060C8 /* TableHeaderView.h */,
+				5DBE132C158A8D8F0026DF0E /* CategoryViewController.h */,
+				5DBE132E158A8D8F0026DF0E /* CategoryViewController.xib */,
+				5D2A6D47158F719200B3AEC2 /* StoryViewController.xib */,
+				5D2A6D45158F719200B3AEC2 /* StoryViewController.h */,
+				5D2A6D46158F719200B3AEC2 /* StoryViewController.m */,
+				5D27FC83159B82CA00E2085F /* UseScrollViewController.h */,
+				5D27FC84159B82CA00E2085F /* UseScrollViewController.m */,
+				5D27FC85159B82CA00E2085F /* UseScrollViewController.xib */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* ARSSReader.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				5D87EAAE16A0A2CE005BA47F /* Default-568h@2x.png */,
+				9CADD33911AC4F39006DC23B /* GDataXMLNode */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				9CADD34D11AC4FB3006DC23B /* libxml2.dylib */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				28A0AAE50D9B0CCF005BE974 /* ARSSReader_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D07C3F315C9A39500184A4D /* lv.bmp */,
+				5D0169F4157903E800FF6339 /* icon.png */,
+				5D0169F11578FCAF00FF6339 /* logo-212x144.png */,
+				9C90A76411B6EDB4008060C8 /* arss_header.png */,
+				9C90A74E11B6E929008060C8 /* arss_back.png */,
+				28F335F01007B36200424DE2 /* RootViewController.xib */,
+				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* ARSSReader-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DDFB0D315C6FE5E001DC37C /* CoreData.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CADD33911AC4F39006DC23B /* GDataXMLNode */ = {
+			isa = PBXGroup;
+			children = (
+				9CADD33A11AC4F39006DC23B /* GDataXMLNode.h */,
+				9CADD33B11AC4F39006DC23B /* GDataXMLNode.m */,
+			);
+			name = GDataXMLNode;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* ARSSReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ARSSReader" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARSSReader;
+			productName = ARSSReader;
+			productReference = 1D6058910D05DD3D006BFB54 /* ARSSReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ARSSReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* ARSSReader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
+				28F335F11007B36200424DE2 /* RootViewController.xib in Resources */,
+				9C90A74F11B6E929008060C8 /* arss_back.png in Resources */,
+				9C90A76511B6EDB4008060C8 /* arss_header.png in Resources */,
+				5D0169F21578FCAF00FF6339 /* logo-212x144.png in Resources */,
+				5D0169F5157903E800FF6339 /* icon.png in Resources */,
+				5DBE1330158A8D900026DF0E /* CategoryViewController.xib in Resources */,
+				5D2A6D49158F719200B3AEC2 /* StoryViewController.xib in Resources */,
+				5D27FC87159B82CA00E2085F /* UseScrollViewController.xib in Resources */,
+				5DB5E2D915A21925006E1BD3 /* RootViewController in Resources */,
+				5D07C3F415C9A39500184A4D /* lv.bmp in Resources */,
+				5D87EAAF16A0A2CE005BA47F /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* ARSSReaderAppDelegate.m in Sources */,
+				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
+				9CADD2E411AC49DA006DC23B /* RSSLoader.m in Sources */,
+				9CADD33C11AC4F39006DC23B /* GDataXMLNode.m in Sources */,
+				9C90A76811B6EDEB008060C8 /* TableHeaderView.m in Sources */,
+				5DBE132F158A8D900026DF0E /* CategoryViewController.m in Sources */,
+				5D2A6D48158F719200B3AEC2 /* StoryViewController.m in Sources */,
+				5D27FC86159B82CA00E2085F /* UseScrollViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Campbell (9C46VT7992)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thomas Campbell (9C46VT7992)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ARSSReader_Prefix.pch;
+				INFOPLIST_FILE = "ARSSReader-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = ARSSReader;
+				PROVISIONING_PROFILE = "1F46E388-C759-40C7-A3D4-C379980DC0D3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1F46E388-C759-40C7-A3D4-C379980DC0D3";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Campbell (9C46VT7992)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thomas Campbell (9C46VT7992)";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ARSSReader_Prefix.pch;
+				INFOPLIST_FILE = "ARSSReader-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = ARSSReader;
+				PROVISIONING_PROFILE = "1F46E388-C759-40C7-A3D4-C379980DC0D3";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1F46E388-C759-40C7-A3D4-C379980DC0D3";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Campbell (9C46VT7992)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thomas Campbell (9C46VT7992)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				OTHER_LDFLAGS = "-lxml2";
+				PROVISIONING_PROFILE = "62B8764D-40B0-4CB6-99A8-914330AE9954";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62B8764D-40B0-4CB6-99A8-914330AE9954";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Thomas Campbell (9C46VT7992)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Thomas Campbell (9C46VT7992)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-lxml2";
+				PROVISIONING_PROFILE = "62B8764D-40B0-4CB6-99A8-914330AE9954";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "62B8764D-40B0-4CB6-99A8-914330AE9954";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ARSSReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ARSSReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
